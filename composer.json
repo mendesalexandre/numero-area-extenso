@@ -1,0 +1,45 @@
+{
+  "name": "mendesalexandre/numero-area-extenso",
+  "description": "Biblioteca PHP para conversão de números e áreas para formato por extenso, especialmente para documentos imobiliários",
+  "type": "library",
+  "keywords": [
+    "php",
+    "numero",
+    "extenso",
+    "area",
+    "metros-quadrados",
+    "centimetros-quadrados",
+    "imobiliario",
+    "documentos"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexandre Teixeira Mendes",
+      "email": "alex.fnvip@gmail.com",
+      "homepage": "https://github.com/seu-usuario"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "NumeroAreaExtenso\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NumeroAreaExtenso\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-html coverage"
+  }
+}

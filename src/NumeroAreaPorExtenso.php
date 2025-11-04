@@ -128,7 +128,8 @@ class NumeroAreaPorExtenso
    */
   public static function converteNumero($valor, bool $bolPalavraFeminina = false): string
   {
-    if (!is_numeric($valor)) {
+    // Converte string vazia, null ou valores não numéricos para 0
+    if (empty($valor) || !is_numeric($valor)) {
       $valor = 0;
     }
 

@@ -128,10 +128,13 @@ class NumeroAreaPorExtenso
    */
   public static function converteNumero($valor, bool $bolPalavraFeminina = false): string
   {
-    // Converte string vazia, null ou valores não numéricos para 0
-    if (empty($valor) || !is_numeric($valor)) {
+    // Trata valores vazios
+    if ($valor === '' || $valor === null) {
       $valor = 0;
     }
+
+    // Converte para numérico se for string numérica, senão usa 0
+    $valor = is_numeric($valor) ? floatval($valor) : 0;
 
     return self::numeroParaExtenso($valor, $bolPalavraFeminina);
   }
